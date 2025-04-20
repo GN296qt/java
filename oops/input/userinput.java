@@ -8,7 +8,7 @@ class Car{ // class nmae is car
     
     // method of class car
     void drive(){
-        System.out.println("the car brand is " +brand + " and the colour is : "+colour);
+        System.out.println(brand +" in "+ colour +" colour is driving .");
     }
 
 }

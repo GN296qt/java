@@ -19,9 +19,9 @@ class Car{
 public class hardcore {
     public static void main(String[] args) {
         
-        // declaration of car class objects
-        Car c1 = new Car(); // object name is c1 // deffualt constructor
-        Car c2 = new Car(); // object name is c2 // default constructor
+        // declaration of car class objects // parametrized constructor
+        Car c1 = new Car(); // object name is c1 
+        Car c2 = new Car(); // object name is c2 
 
         //intializing attributes of object c
         
