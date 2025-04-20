@@ -38,3 +38,8 @@ in parametrized constructor it is used to -differentiate the instance variables 
 instance variable - refers to attributes of object
 local varibles - refers to the parameters passed to the constructor
 this.instancevariable = localvariable
+
+constructor overloading
+-refers to a single class having muliple constructors with the same name but diffeent parameter lists
+-it is example of compiletime/static polymorphism because constructor to be invoked is determined at compile time based on hte argumnets provided
+
