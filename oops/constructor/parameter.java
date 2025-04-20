@@ -21,7 +21,7 @@ class Car{ // car class
 public class parameter { // main class
      public static void main(String[] args) {
          
-        //objects declaration // parametrized constructor
+        //objects declaration // parametrized constructor call
          Car c1 = new Car(null, null); // parametrs are not passed
          Car c2 = new Car("texla","blue");  // parameters are passed
         
@@ -29,7 +29,7 @@ public class parameter { // main class
         c1.drive(); // by object c1
         c2.drive(); // by object c2
         
-        
+
         
      }
     }

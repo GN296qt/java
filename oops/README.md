@@ -40,6 +40,23 @@ local varibles - refers to the parameters passed to the constructor
 this.instancevariable = localvariable
 
 constructor overloading
--refers to a single class having muliple constructors with the same name but diffeent parameter lists
--it is example of compiletime/static polymorphism because constructor to be invoked is determined at compile time based on hte argumnets provided
+- refers to a single class having muliple constructors with the same name but diffeent parameter lists
+- it is example of compiletime/static polymorphism because constructor to be invoked is determined at compile time based on hte argumnets provided
 
+inheritance
+
+- it is a mechanism where one class (called child class / sub class) derives or inherits the attributes and methods  of another class (called parent or superclass)
+- it promote code reusability 
+- parent class syntax
+             class parentclassname{
+
+             }
+- child class syntax(extends keyword is used)
+         class childclassname extends parentclassname{
+
+         }             
+
+
+types of inheritence
+1.single inheritenance
+one child class inherits from one parent class 
