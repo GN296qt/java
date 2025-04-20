@@ -17,7 +17,7 @@ public class userinput { // main class is userinput
     public static void main(String[] args) {
         Scanner sc  = new Scanner(System.in);// Scanner class object is sc
 
-        Car c1 = new Car();// declaration of object c1
+        Car c1 = new Car();// declaration of object c1 // default constructor
         System.out.println("Enter details of car  ");
         System.out.print("brand is : ");
         c1.brand = sc.nextLine(); // input for attribute brand
@@ -27,5 +27,6 @@ public class userinput { // main class is userinput
         c1.drive();// accessing drive method
     
         sc.close();
+
     }
 }
