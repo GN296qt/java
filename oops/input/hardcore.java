@@ -1,7 +1,7 @@
 // input is a subfloder of oops folder
 package oops.input ;
 
-//class anme is car
+//class name is car
 class Car{
     
     //attributes of car class
@@ -12,7 +12,7 @@ class Car{
     void drive(){
           System.out.println("car is driving");
     }
-    
+
 }
 
 // main class
