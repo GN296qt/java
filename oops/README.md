@@ -59,4 +59,10 @@ inheritance
 
 types of inheritence
 1.single inheritenance
-one child class inherits from one parent class 
+- one child class inherits from one parent class 
+- parent -> child
+
+2.multilevel inheritence
+- a class is inherited from another class which is further inherited by another class
+- grandparent -> parent -> child
+
