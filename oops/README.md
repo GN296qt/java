@@ -69,3 +69,11 @@ types of inheritence
 3.herichical inheritence
 -  multiple child class inherited from same parent class
 -  child1 , child2 ....,child n -> parent class
+
+
+final keyword
+-> it is used to restricts inheritance
+-> syntax
+   final class classname{
+    
+   }
