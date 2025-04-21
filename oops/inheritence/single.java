@@ -23,10 +23,12 @@ public class single { // main class : single
         Animal animal = new Animal(); //parent class
         Dog dog = new Dog(); // child class
 
-        // accessing methods by object of
-        animal.eat();//parent class
-        dog.eat();//child class
-        dog.bark(); //cild class
+        //  methods that can be access by object of
+        //parent class
+        animal.eat();
+        //child class
+        dog.eat();
+        dog.bark();
 
       }
 }
