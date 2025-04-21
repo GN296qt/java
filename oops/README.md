@@ -75,5 +75,10 @@ final keyword
 -> it is used to restricts inheritance
 -> syntax
    final class classname{
-    
+
    }
+
+ method overidding
+ - refers to ability of subclass to either eplace or provide a specific implementation for a method that is already defined in its superclass
+ - inheritence is prerequiste
+ - example of run time polymorphisim as which method to be called is determined at runtime based on actualobject being referred to  
