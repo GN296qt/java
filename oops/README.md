@@ -66,3 +66,6 @@ types of inheritence
 - a class is inherited from another class which is further inherited by another class
 - grandparent -> parent -> child
 
+3.herichical inheritence
+-  multiple child class inherited from same parent class
+-  child1 , child2 ....,child n -> parent class
