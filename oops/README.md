@@ -206,4 +206,7 @@ public class mainclassname{
      }
 }
 
-
+functional interface
+- it refers to interface that contains exactly one abstract method
+- @functionalInterface is aannotation which is optional but recommnded to use
+- it is commonly used in lambda expressions to implemnt behavior concisly
