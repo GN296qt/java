@@ -4,7 +4,7 @@ class
 - is a blueprint/template that defines attributes and methods of objects.
 - it follows uniformity across objects i.e all the objects of one class have same attributes and same methods.
 - there are 2 types of classes in a code one is user defined and other is main class(file name ) .here we are primarily considering user defined class
-
+- conventionally class name first letter to be capital 
 objects 
 - instance of class
 -  declaration means creating objects
@@ -47,6 +47,7 @@ inheritance
 
 - it is a mechanism where one class (called child class / sub class) derives or inherits the attributes and methods  of another class (called parent or superclass)
 - it promote code reusability 
+- parent class called superclass and childclass called subclass
 - parent class syntax
              class parentclassname{
 
@@ -54,7 +55,13 @@ inheritance
 - child class syntax(extends keyword is used)
          class childclassname extends parentclassname{
 
-         }             
+         }      
+- in main class objects declaration and intialization
+  classname objectname = new classname();//together
+  or
+  classname objectname; // declaration
+  objectname = new classname(); // intialization
+                    
 
 
 types of inheritence
@@ -82,3 +89,7 @@ final keyword
  - refers to ability of subclass to either eplace or provide a specific implementation for a method that is already defined in its superclass
  - inheritence is prerequiste
  - example of run time polymorphisim as which method to be called is determined at runtime based on actualobject being referred to  
+ - @Override annotation is used which is optional but recommeneded which indicate that the method is overridng a method in its superclass
+- it often involves upcasting (assigning a child class object to a parent class reference) i.e
+parentclassname objectname; // declaration 
+objectname = new childclassname(); // intialization
