@@ -178,3 +178,32 @@ Concrete method
          //body
       }
 
+interface
+- defined as set of abstract method
+- it is implemented in subclass by overidding th abstract method 
+- it syntax 
+interface parentclassname{
+    returntype methodname1();     
+    returntype methodname2();    
+}
+class childclassname implemnts parentclasname{
+    @override
+    public returntype methodnmae1(){
+       //body
+    }
+    @override
+    public returntype methodnmae2(){
+      //body
+    }
+}
+public class mainclassname{
+     public static void main(String[]arg){
+          parentclassname objectname  
+          objectname = new childclassname(); 
+          objectname.methodname1();
+          objectname.methodname2();
+
+     }
+}
+
+
