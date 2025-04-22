@@ -43,6 +43,11 @@ constructor overloading
 - refers to a single class having muliple constructors with the same name but diffeent parameter lists
 - it is example of compiletime/static polymorphism because constructor to be invoked is determined at compile time based on hte argumnets provided
 
+Method signature into
+method name - identifies the function
+parameter list - specifies the types and order of arguments.
+return type - defines the type of value returned
+
 inheritance
 
 - it is a mechanism where one class (called child class / sub class) derives or inherits the attributes and methods  of another class (called parent or superclass)
@@ -56,6 +61,15 @@ inheritance
          class childclassname extends parentclassname{
 
          }      
+- main class syntax(public keyword is used)
+    public class mainclassname{
+          public static void main(Stirng[] args){
+              parentclassname objectname = new parentclassname();
+              childclassname objectname = new childclassname();
+              // rest of the body
+
+          }
+      }         
 - in main class objects declaration and intialization
   classname objectname = new classname();//together
   or
@@ -77,12 +91,17 @@ types of inheritence
 -  multiple child class inherited from same parent class
 -  child1 , child2 ....,child n -> parent class
 
+concepts related to inheritence
+- final keyword
+- method overriding
+- abstract class
+- interface
 
 final keyword
 -> it is used to restricts inheritance
 -> syntax
    final class classname{
-
+       //body
    }
 
  method overidding
@@ -93,3 +112,69 @@ final keyword
 - it often involves upcasting (assigning a child class object to a parent class reference) i.e
 parentclassname objectname; // declaration 
 objectname = new childclassname(); // intialization
+- syntax(for both the methods of parent and child class methodsignature should be same only)
+class parentclassname{
+     returntype methodname(){
+          //body
+     }
+}
+class childclassname extends parentclassname{
+      @override
+      returntype methodname(){
+           //body
+      }
+}
+public class mainclassname{
+       public static void main(String[] args){
+             parentclassname objectname; 
+             objectname = new childclassname(); 
+             objectname.methodname();
+       }
+}
+
+Abstract class
+
+- it is a type of a class that is designed to be the blueprint for other classes.
+- it can't be intialised on its own means can't create objects.
+- it include abstract methods as well as concrete methods.(compulsory)
+- syntax(both abstractmethod of parent class and override method of childclass have same methodsignature )
+abstract class classname{//parentclass
+    abstract returntype methodname(); 
+    returntype concretemethodname(){
+         //body
+      }
+}  
+class childclassname extends parentclassname{
+      @override
+      returntype methodname(){
+             //body
+      }
+}
+public class mainclassname{
+     public static void main(String[] args){
+             parentclassname objectname; 
+             objectname = new childclassname(); 
+             objectname.methodname();
+             objectname.concretemethodname();
+     }
+}
+
+
+Abstract method
+- a method that is declared without a body
+- it only specifies the method signature but doesn't provide implemntation
+- can only be defined inside abstract class and interface
+- it is implemented in a subclass by overriding it unless the subclass is also abstract
+- syntax 
+    abstract returntype methodname();
+
+Concrete method
+- A regular method with a complete implemntation inside a class
+- it contains executable code.
+- can only be defined in abstract class and regular class
+- does not require overriding (but can be overriden if needed) as it is fully functional their own
+- syntax
+   returntype concretemethodname(){
+         //body
+      }
+
