@@ -208,5 +208,42 @@ public class mainclassname{
 
 functional interface
 - it refers to interface that contains exactly one abstract method
-- @functionalInterface is aannotation which is optional but recommnded to use
+- @functionalInterface is aannotation which is optional but recommnded to use as it prevents mutiple abstarct method
 - it is commonly used in lambda expressions to implemnt behavior concisly
+- in java there is built-in functional interface like predicate,consumer and supplier
+
+
+comparision btw abstarct class and interface
+
+- similarity
+both doesn't require inheritenace but they are designed to be used in inheritance - based structures
+
+- difference
+
+abstract class
+1. both concrete and abstract method
+2. syntax 
+       abstract class classname
+3. astract method declaration 
+        abstarct returntype metohname();
+4. subclass declaration uses extends keyword
+5. override method declaration
+      returntype methodname(){
+
+      }
+    
+            
+
+interface
+1. set or only one abstract methods
+2. syntax 
+       interface classname
+3. abstract method declaration
+       returntype returname
+4.  subclass declaration uses implemnts keyword
+5. override method declaration
+          public returntype methodnmae(){
+            
+          }
+
+
