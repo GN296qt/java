@@ -266,5 +266,7 @@ types of inheritence
 - defined as a subclass is inheriting from multiple super class
 - can be achieved through interface thus avoid ambiguity issues eg class car has two attributes that too string are brand and colour are aand lets make two constructor each one having exactly one attribute then while calling object inialization then there will be confusion which constructor is calling string or colour one ?
 
-
+5.hybrid inheritenance
+- refers to comination of two or more types of inheritenance
+- Java doesn't directly support hybrid inheritance with classes because it avoids ambiguity and the diamond problem. Instead, Java achieves similar results using interfaces.
 
