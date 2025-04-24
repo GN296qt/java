@@ -270,3 +270,22 @@ types of inheritence
 - refers to comination of two or more types of inheritenance
 - Java doesn't directly support hybrid inheritance with classes because it avoids ambiguity and the diamond problem. Instead, Java achieves similar results using interfaces.
 
+Access specifiers
+- known as acess modifiers
+- they are keywords that controlthe visibility and accessibility of classes ,methods and variables.
+- ensure that the code adheres to priciples of encapsulation and modularity
+- types are
+1.public
+-  accessible eveywhere i.e inside same class ,package and from other packages
+- widest visibility
+2.protected
+- accessible within the same package and (in subclasses in other packages through inhritenance only)
+3.default
+- refers to no modifier specified
+- accessible only whithin the same package so also referred to as package-private visibility
+4.private
+- accessible within same class only
+- most restricted access somused for sensitive data
+
+
+
