@@ -261,3 +261,10 @@ interface
           }
 
 
+types of inheritence
+4.multiple inheritance
+- defined as a subclass is inheriting from multiple super class
+- can be achieved through interface thus avoid ambiguity issues eg class car has two attributes that too string are brand and colour are aand lets make two constructor each one having exactly one attribute then while calling object inialization then there will be confusion which constructor is calling string or colour one ?
+
+
+
