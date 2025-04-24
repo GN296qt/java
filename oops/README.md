@@ -287,5 +287,14 @@ Access specifiers
 - accessible within same class only
 - most restricted access somused for sensitive data
 
+visibility table
+access      same    same      subclass       other
+modifier    class   package   diffpackage    package
+public      yes     yes       yes            yes  
+protected   yes     yes       yes            no
+default     yes     yes       no             no
+private     yes     no        no             no
+
+
 
 
