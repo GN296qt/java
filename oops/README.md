@@ -307,3 +307,14 @@ private     yes     no        no             no
 private method and varible can be access within the class by public method
 
 
+super operator
+- refer to members (variables,methods) of superclass
+- purpose 
+1. Accessing Superclass Variables or Methods
+- syntax 
+        super.methodname()
+
+2. Calling Superclass Constructors 
+- syntax 
+        super(parentclassname)
+        
