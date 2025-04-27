@@ -280,6 +280,7 @@ Access specifiers
 - widest visibility
 2.protected
 - accessible within the same package and (in subclasses in other packages through inhritenance only)
+- controlled access with inhritance
 3.default
 - refers to no modifier specified
 - accessible only whithin the same package so also referred to as package-private visibility
