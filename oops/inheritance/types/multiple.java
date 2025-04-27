@@ -1,4 +1,4 @@
-package oops.inheritence;
+package oops.inheritance.types;
 
 interface Flyable{ //interface1
     void fly();// abstractmethod

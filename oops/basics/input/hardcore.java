@@ -1,5 +1,5 @@
 // input is a subfloder of oops folder
-package oops.input ;
+package oops.basics.input ;
 
 //class name is car
 class Car{

@@ -1,4 +1,4 @@
-package oops.concept_inherit;
+package oops.inheritance.concept;
 
 abstract class Animal{//abstract class (parent class)
 

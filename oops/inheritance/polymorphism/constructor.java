@@ -1,4 +1,4 @@
-package oops.polymorphism;
+package oops.inheritance.polymorphism;
 
 class Car{ // car class
 
@@ -29,7 +29,7 @@ class Car{ // car class
 
      }
 
-     public class overloading {
+     public class constructor {
            public static void main(String[] args) {
 
             // object declaration // calling of

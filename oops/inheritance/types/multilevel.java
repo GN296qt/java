@@ -1,4 +1,4 @@
-package oops.inheritence;
+package oops.inheritance.types;
 
 class Animal{ //parent class
 

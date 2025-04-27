@@ -1,4 +1,7 @@
-package oops.concept_inherit;
+package oops.inheritance.concept;
+
+
+
 // Interface 
 interface Vechicle{
     ///abstract methods

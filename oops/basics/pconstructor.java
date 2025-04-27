@@ -1,4 +1,4 @@
-package oops.concept_inherit; // subfolder : constructor , folder : oops
+package oops.basics; // subfolder : constructor , folder : oops
 
 class Car{ // car class
     

@@ -1,4 +1,4 @@
-package oops.concept_inherit; // folder oops subfolder concept_inherit
+package oops.inheritance.concept; // folder oops subfolder concept_inherit
 
 class Animal{ // parent class
 

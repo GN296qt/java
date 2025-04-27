@@ -1,4 +1,4 @@
-package oops.input; // input is a subfolder of oops folder
+package oops.basics.input; // input is a subfolder of oops folder
 import java.util.Scanner; // import module for taking input
 class Car{ // class nmae is car
     
