@@ -31,14 +31,23 @@ constructor
 -defined by the programmer
 -accepts parameters to set custom values for object fields
 
-this keyowrd
--refers to current object being created or used
-in parametrized constructor it is used to -differentiate the instance variables and local variables
-
-instance variable - refers to attributes of object
-local varibles - refers to the parameters passed to the constructor
-this.instancevariable = localvariable
-
+this operator
+- also called this keyword
+- it is a reference to the current object within an instance method
+- not it can be used (any purpose) in normla method or contructor.
+- purpose
+ 1. refers to current object being created 
+- differentiate the instance variables and local variables when a method or constructor has local variables with the same name as instance variables
+- instance variable (refers to attributes of object)and local varibles (refers to the parameters passed to the constructor)
+- this.instancevariable = localvariable
+ 2. invoke curent class methods 
+- call methods of the current class 
+3. Accessing Current Class Constructor
+- call a constructor from another constructor within the same class
+4. Passing the Current Object as a Parameter
+- pass the current object to other methods or constructors
+5. Returning the Current Object
+- returned to enable method chaining
 constructor overloading
 - refers to a single class having muliple constructors with the same name but diffeent parameter lists
 - it is example of compiletime/static polymorphism because constructor to be invoked is determined at compile time based on hte argumnets provided
@@ -295,6 +304,6 @@ protected   yes     yes       yes            no
 default     yes     yes       no             no
 private     yes     no        no             no
 
-
+private method and varible can be access within the class by public method
 
 
