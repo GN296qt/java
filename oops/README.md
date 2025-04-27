@@ -339,8 +339,7 @@ Applet
 -> applets rely on graphical interfaces for user interaction
 4. embedded in html files
 -> applets are integrated into html using the <applet> tag or <object> tag depending on the browser or tool
-5. uses AWT
--> applets leverage the AWT for GUI components like buttons,labels,text fields,scrollbars etc to create interactive user interfaces.
+
 
 lifecycle of an applet
 1. init()
@@ -362,4 +361,39 @@ lifecycle of an applet
 - invoked when the applet is about to be unloaded permanently
 - eg browser is closed
 - used to release resources or perform cleanup
+
+AWT(Abstract Window Toolkit)
+-> java GUI(Graphical User Interface) library which provides tools for building  interactive user interfaces .
+-> features
+- platform independence
+- lightweight components (efficient)
+- window based applications
+
+AWT Architecture
+-> containers 
+- hold and organized other components
+- eg  frame(top level window) ,panel(grouping components within a container)
+-> layout Managers
+- arranging components within containers
+- eg 
+1. FlowLayout - arranges components in a left to right flow
+2. BorderLayout - divide sthe container into 5 regions(north,south,east,west,center)
+3. GridLayout - arranges components in rows andcolumns
+4. CardLayout - allows multiple components in the same area like tabs
+5. GridBagLayout - flexible layout for components of different sizes.
+-> Event Handling
+- supports event driven programming
+- events eg action , mouse,key
+- eg user actions like clicking buttons ,resizing windows are handled using event listeners
+-> gui components
+1. button - a clickable button created using button class
+2. Label - dispaly static text
+3. TextField - a single line text input field
+4. TextArea - a multi line text input area
+5. Choice - dropdown list for selecting one option
+6. List - a scrollable list of items(single or multiple selection)
+7. Scrollbars -  scroll horizontally or vertically in any container where content exceeds the visible area
+8. Checkbox - a box that can be checked or unchecked
+
+
 
