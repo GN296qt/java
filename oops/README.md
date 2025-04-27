@@ -313,8 +313,53 @@ super operator
 1. Accessing Superclass Variables or Methods
 - syntax 
         super.methodname()
+        super.variablename
 
 2. Calling Superclass Constructors 
 - syntax 
         super(parentclassname)
-        
+
+method overloading
+- define as multiple methods with same anme but different parameter lists(number,type or both) within same class
+- enaches code readability and reusability
+- example of comiple time polymorphism as which method to be executed is determined at compile time based on the arguments passed.
+
+
+
+
+Applet
+- special type of java program
+- Features
+1. java-enabled 
+-> designed to be executed within a web browser or an applet viewer that supports java
+2. small application
+-> light weight programs
+-> suitabble for client side tasks (games or animations)
+3. window-based
+-> applets rely on graphical interfaces for user interaction
+4. embedded in html files
+-> applets are integrated into html using the <applet> tag or <object> tag depending on the browser or tool
+5. uses AWT
+-> applets leverage the AWT for GUI components like buttons,labels,text fields,scrollbars etc to create interactive user interfaces.
+
+lifecycle of an applet
+1. init()
+- called once when the applet is first loaded
+- used to intialize th applet
+- eg setting up resources or variables
+2. start()
+- called each time the applet becomes active
+- eg when the page containing the applet is visited
+- used to strat animations or threads
+3. paint()
+- invoked to redraw the applet's interface.it takes graphics object as an argument
+- used for all graphical output
+4. stop()
+- called when the applet becomes inactive
+- eg the user navigates away from the page page containing it
+- used to stop animations or threads to conserve system resources
+5. destroy()
+- invoked when the applet is about to be unloaded permanently
+- eg browser is closed
+- used to release resources or perform cleanup
+
