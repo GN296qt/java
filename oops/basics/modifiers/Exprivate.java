@@ -11,7 +11,7 @@ public class Exprivate {
     }
     //public  method
     public static void main(String[] args) {
-        // object declration and intialization
+        //  object declaration and intialization
         Exprivate e1 = new Exprivate();
         //accessing private varibale
         System.out.println(e1.message);
@@ -19,3 +19,6 @@ public class Exprivate {
         e1.display();
     }
 }
+// this is a private variable
+// private method
+// this is a private variable

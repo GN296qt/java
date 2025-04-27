@@ -24,3 +24,7 @@ public class Expublic{
 
     }
 }
+
+// this is a public varaible
+// public method
+// this is a public varaible
