@@ -11,7 +11,7 @@ class Animal{ // parent class
 class Dog extends Animal{ // child1 class
    
     @Override // annotation
-    void sound(){ //overriding method
+    void sound(){ 
         System.out.println("dog barks");
     }
 
@@ -20,7 +20,7 @@ class Dog extends Animal{ // child1 class
 class Cat extends Animal{ // child2 class
     
     @Override //annotation
-    void sound(){ //overriding method
+    void sound(){ 
         System.out.println("cat meows");
     }
 
