@@ -1,5 +1,6 @@
-package oops.constructor;
-    class Car{ // car class
+package oops.polymorphism;
+
+class Car{ // car class
 
               // instance variables
                 String brand;

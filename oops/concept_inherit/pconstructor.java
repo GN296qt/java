@@ -1,4 +1,4 @@
-package oops.constructor; // subfolder : constructor , folder : oops
+package oops.concept_inherit; // subfolder : constructor , folder : oops
 
 class Car{ // car class
     
@@ -18,7 +18,7 @@ class Car{ // car class
     }
 }
 
-public class parameter { // main class
+public class pconstructor { // main class
      public static void main(String[] args) {
          
         //objects declaration // parametrized constructor call
