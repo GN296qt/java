@@ -329,6 +329,7 @@ method overloading
 
 Applet
 - special type of java program
+- no longer supported by modern browsers
 - Features
 1. java-enabled 
 -> designed to be executed within a web browser or an applet viewer that supports java
@@ -366,7 +367,7 @@ AWT(Abstract Window Toolkit)
 -> java GUI(Graphical User Interface) library which provides tools for building  interactive user interfaces .
 -> features
 - platform independence
-- lightweight components (efficient)
+- heavyweight (uses resources of underlined operating system)
 - window based applications
 
 AWT Architecture
@@ -382,9 +383,6 @@ AWT Architecture
 4. CardLayout - allows multiple components in the same area like tabs
 5. GridBagLayout - flexible layout for components of different sizes.
 -> Event Handling
-- supports event driven programming
-- events eg action , mouse,key
-- eg user actions like clicking buttons ,resizing windows are handled using event listeners
 -> gui components
 1. button - a clickable button created using button class
 2. Label - dispaly static text
@@ -396,4 +394,40 @@ AWT Architecture
 8. Checkbox - a box that can be checked or unchecked
 
 
+Event Handling
+- mechanism to handle events(actions or occurrences triggered by user interactions or system generated inputs) like clicking button
+- core concepts
+-> delegation event model 
+ - mecchanism for seprating event source and lister
+ - Steps:
+1. An event source registers an event listener.
+2. When an event occurs, the source delegates it to the listener.
+
+Example: A button generates a click event, which is handled by a method in the listener object.
+-> event sources 
+- objects that generate events
+- eg button
+-> event classes
+- define methods to handle specific events
+-> Event listeners 
+- define methods to handle specific types  events
+- common event listeners  Event      Examples
+1. ActionListener         action     buttonclick     
+2. MouseListener          mouse      mouse clicks
+3. KeyListener            keyboard   keypresses      
+4. WindowListener         window     window closing
+5. ItemListener-item state changes - checkbox selection
+How Listeners Work:
+1. The listener object must be registered with the event source.
+2. The listener interface methods are called automatically when an event occurs.                                               
+-> adapter classes 
+-  provide default implementations of event listener 
+- common adapter classes     event listner
+1. MouseAdapter              MouseListener
+2. KeyAdapter                KeyListener
+3. WindowAdapter             WindowListener
+
+-> inner class 
+- these classes defined within another classes
+- provide inline implementationsof event listener objects
 
