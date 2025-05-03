@@ -1,9 +1,8 @@
 package oops.applets;
 import java.awt.*;// all awt classes
 import java.awt.event.*;// all event handling classes
-import java.lang.reflect.Method;
 
-import oops.inheritance.polymorphism.method;
+
 //awtwindow is a public class which inherits from frame class 1. making a window to display gui componnets 2. and also handles action events by implemnting ActionListener
 public class awtwindow extends Frame implements ActionListener{
     // declaration instance avriables
@@ -11,7 +10,7 @@ public class awtwindow extends Frame implements ActionListener{
       Button bt1,bt2,bt3;
       String msg = "";
       
-      // constructor
+      // constructorcd basci
       public awtwindow(){
 
             // layout manager : flowlayout(aranges components sequentially from l to r)
@@ -79,6 +78,7 @@ public class awtwindow extends Frame implements ActionListener{
         w1.setVisible(true);//window visible to user
       }
 }
+
 // execution flow 
 
 // The awtwindow constructor sets up the GUI components (labels, buttons, layout).

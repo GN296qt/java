@@ -351,12 +351,13 @@ lifecycle of an applet
 - called each time the applet becomes active
 - eg when the page containing the applet is visited
 - used to strat animations or threads
-3. paint()
-- invoked to redraw the applet's interface.it takes graphics object as an argument
+3. paint(Graphics g)
+- invoked to redraw the applet's interface.
+- it takes graphics object as an argument
 - used for all graphical output
 4. stop()
 - called when the applet becomes inactive
-- eg the user navigates away from the page page containing it
+- eg the user navigates away from the page containing it
 - used to stop animations or threads to conserve system resources
 5. destroy()
 - invoked when the applet is about to be unloaded permanently
@@ -383,7 +384,7 @@ AWT Architecture
 4. CardLayout - allows multiple components in the same area like tabs
 5. GridBagLayout - flexible layout for components of different sizes.
 -> Event Handling
--> gui components
+-> gui components (also called awt controllers)
 1. button - a clickable button created using button class
 2. Label - dispaly static text
 3. TextField - a single line text input field
@@ -430,4 +431,63 @@ How Listeners Work:
 -> inner class 
 - these classes defined within another classes
 - provide inline implementationsof event listener objects
+
+AWT Syntax
+
+// import packages
+// import all awt components
+import java.awt.*; 
+// -> import all event handling classes
+import java.awt.event.*;
+
+// class declaration
+public class classame extends Containernmae implements Eventclassname{
+
+    // instance variables declaration
+    awtcontrollername variablename;
+
+    //constructor
+    public classname(){
+       
+       //set layout manager
+       setLayout(new Layoutname());
+
+       //awt ontroller intialization
+       variablename = new awtcontollername();
+       
+       // add components to containername
+       add(variablename);
+
+       // register event handler 
+       addWindowListener(new WindowAdapter(){
+            public void windowClosing(WindowEvent e){
+                 System.exist(0);//closes windowapp
+            }
+       } );
+
+      // setting window properties
+      //dimensions to be in pixels
+       setSize(xdimension,ydimension); 
+       // window title
+       setTitle("title name");
+       // visibilty of window if true
+       setVisible();//can be true or fasle
+    }
+
+    //handling evnet
+    public void actionPerformed(ActionEvent e){
+         variablenmae.setText("message to be displyed");
+    }   
+
+    //main method - entry point of execution
+    public staic void main(String[] args){
+        //creates an instance of classname to        display gui
+        new classname();
+    }
+}
+
+
+    
+
+
 

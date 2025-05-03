@@ -16,6 +16,7 @@ class Car{ // car class
     void drive(){
         System.out.println(brand +" in "+colour+" colour is driving");
     }
+
 }
 
 public class pconstructor { // main class
@@ -36,3 +37,6 @@ public class pconstructor { // main class
 
 // null in null colour is driving
 // texla in blue colour is driving
+
+
+// referring to instance variable 
