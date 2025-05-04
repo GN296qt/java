@@ -412,7 +412,7 @@ import java.awt.event.*;
 // Classname is inheriting from ContainerName for making gui compomnents
 // ClassName ia slao implementing 
 //EvnetHandlerClassName
-public class classame extends ContainerName implements Eventhandlerclassname{
+public class classame extends ContainerName implements EventListenername{
 
     //awt controllers  instance variables declaration
     awtcontrollername variablename;
@@ -483,7 +483,9 @@ Example: A button generates a click event, which is handled by a method in the l
 - Each listener is registered with a component using addEventListener()
 How Listeners Work:
 1. The listener object must be registered with the event source.
-2. The listener interface methods are called automatically when an event occurs.                                               
+2. The listener interface methods are called automatically when an event occurs.      
+
+-> event handler - is the method inside the listener that defines what action to perform- eg actionperformed for button clicks
 -> adapter classes 
 -  provide default implementations of event listener 
 
@@ -556,5 +558,50 @@ swing
 - customizable(via UIManager)
 
 
+
+Networking basics
+
+1. sockets
+- socket is a end point btw 2 way communication
+- is a combination of an IP address and a Port number
+Ip address - identifies the specific device in the network
+port number - specifies the particular service or application running on that device
+- eg a web server is running at 192.168.1.1 on port 8080, the full socket would be: 192.168.1.1:8080
+2. Factory Methods
+- used ot create socket instances efficiently
+- eg SocketFactory - create socket with predefined settings
+
+3. InetAddress
+- represents an IP address
+- help to resolve hostnames and IPs
+
+Java socket programming 
+- provides facility to share btw diff computing devices
+- uses: create web services , server client application and implemnt networking protcoal
+- types of socket 
+1. Connection oriented
+- uses  TCP(Transmission Control Protocoal)
+- requires establishment of a connection btw client and server before data transfer
+- communication  is reliable ,ordered and error checked but slow
+- eg in java Socket (client side) and ServerSocket(server side)
+2. connectionless 
+- uses UDP(user Datagram packet )
+- not need to to establish connection 
+- communication is fast but unreliable , unordered and not guranted delivery
+- eg in java Datagramsockrt and DatagramPacket
+
+JDBC(Java Database Connectivity)
+
+1. JDBC Architecture
+- acts as a bridge between java applications and database
+2. JDBC Drivers
+Type 1 : JDBC -ODBC Bridge (depreceted)
+Type 2 : Native API Driver
+Type 3 : Network Protocoal Driver
+Type 4 : Thin driver (directly interacts with database)
+3. connecting to a database
+- Load the driver
+- Establish a connection
+- Execute queries
 
 
