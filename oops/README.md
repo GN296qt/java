@@ -407,21 +407,24 @@ Event Handling
  - Steps:
 1. An event source registers an event listener.
 2. When an event occurs, the source delegates it to the listener.
-
 Example: A button generates a click event, which is handled by a method in the listener object.
 -> event sources 
 - objects that generate events
 - eg button
--> event classes
-- define methods to handle specific events
--> Event listeners 
-- define methods to handle specific types  events
+-> event classes - define the type of event occuring
+-> Event listeners - define who will handle the event and what action to perform
 - common event listeners  Event      Examples
 1. ActionListener         action     buttonclick     
 2. MouseListener          mouse      mouse clicks
 3. KeyListener            keyboard   keypresses      
 4. WindowListener         window     window closing
 5. ItemListener-item state changes - checkbox selection
+
+- eg 
+ -- Uses ActionEvent (event class) when the button is clicked.
+ -- Uses ActionListener (event listener) to handle the  button click action.
+ -- Registers WindowAdapter to close the window properly
+
 How Listeners Work:
 1. The listener object must be registered with the event source.
 2. The listener interface methods are called automatically when an event occurs.                                               
