@@ -385,8 +385,6 @@ AWT Architecture
 3. GridLayout - arranges components in agrid with equal -sized rows and columns
 4. CardLayout -  allows switching between multiple pannels dynamically
 5. GridBagLayout - flexible layout as it provides advanced control over positioning & resizing components.
-
-
 -> Event Handling
 -> gui components (also called awt controllers)
 1. button - a clickable button created using button class
@@ -399,46 +397,7 @@ AWT Architecture
 8. Checkbox - a box that can be checked or unchecked
 
 
-Event Handling
-- mechanism to handle events(actions or occurrences triggered by user interactions or system generated inputs) like clicking button
-- core concepts
--> delegation event model 
- - mecchanism for seprating event source and lister
- - Steps:
-1. An event source registers an event listener.
-2. When an event occurs, the source delegates it to the listener.
-Example: A button generates a click event, which is handled by a method in the listener object.
--> event sources 
-- objects that generate events
-- eg button
--> event classes - define the type of event occuring
--> Event listeners - define who will handle the event and what action to perform
-- common event listeners  Event      Examples
-1. ActionListener         action     buttonclick     
-2. MouseListener          mouse      mouse clicks
-3. KeyListener            keyboard   keypresses      
-4. WindowListener         window     window closing
-5. ItemListener-item state changes - checkbox selection
 
-- eg 
- -- Uses ActionEvent (event class) when the button is clicked.
- -- Uses ActionListener (event listener) to handle the  button click action.
- -- Registers WindowAdapter to close the window properly
-
-How Listeners Work:
-1. The listener object must be registered with the event source.
-2. The listener interface methods are called automatically when an event occurs.                                               
--> adapter classes 
--  provide default implementations of event listener 
-- common adapter classes     event listner
-1. MouseAdapter              MouseListener
-2. KeyAdapter                KeyListener
-3. WindowAdapter             WindowListener
-
--> inner class 
-- these classes defined within another classes
-- provide inline implementationsof event listener objects
-- eg ButtonHandler
 
 AWT Syntax
 
@@ -502,7 +461,100 @@ public class classame extends ContainerName implements Eventhandlerclassname{
 }
 
 
+
+Event Handling
+- mechanism to handle events(actions or occurrences triggered by user interactions or system generated inputs) like clicking button
+- core concepts
+
+-> delegation event model 
+ - mecchanism for seprating event source and lister
+ - Steps:
+1. An event source registers an event listener.
+2. When an event occurs, the source delegates it to the listener.
+Example: A button generates a click event, which is handled by a method in the listener object.
+
+-> event sources 
+- objects that generate events
+- eg button
+
+-> event classes - define the type of event occuring
+
+-> Event listeners - define who will handle the event and what action to perform
+- Each listener is registered with a component using addEventListener()
+How Listeners Work:
+1. The listener object must be registered with the event source.
+2. The listener interface methods are called automatically when an event occurs.                                               
+-> adapter classes 
+-  provide default implementations of event listener 
+
+
+-> inner class 
+- define event handlers within another class
+-  allow access to outer class variables without neding to make them global
+- types 
+1. regular innner class
+- a class with a name 
+- reusabilty at multiple times
+- structured evnt handling as code more structured
+2.  anonymous iner class
+- a class without a name
+- used only once
+- quick evnt handling as code is more compact
+eg
+
+Event Class   - Triggered When...
+1. ActionEvent - A button is clicked or   a menu item is selected
+2. MouseEvent- The mouse is clicked, moved, or released.
+3. keyEvent - A key is pressed or released.
+4. Windowevent - A window is opened, closed, activated, or deactivated.
+5. itemevent - A checkbox or list selection changes.
+6. FocusEvent - A component gains or loses focus.
+
+Event Listener  -  Handles Events From(same those of  triggered when - event class)
+1. ActionListener - 
+2. MouseListener -
+3. keyListner -
+4. WindowListener - 
+5. itemListener - 
+
+Adapter class - implements
+1. WindowAdapter - Windowlistener (7 methods)
+2. MouseAdapter - MouseListener (5 methods)
+3. KeyAAdapter - Key listener(3 methods)
+
     
+Swing
+- part of JFC(java Foundation Classes) used for building rich GUIs(graphical User Interface)
+
+comparison of awt and swing
+
+feature              
+- component type
+- package used
+- performance
+- event handling model
+- performance
+- thread safety
+- advanced components
+- look and feel
+
+AWT
+- heavyweight(os dependent)
+- java.awt
+- slower(os calls)
+- delegation event model
+- not thread safe
+- limited eg button ,Label
+- native to os
+
+swing
+- lightweight(pure java)
+- javax.swing
+- faster(pure java rendering)
+- mostly thread safe
+- provides rich ui elemnts eg jTabbedpane,JTable,JTree
+- customizable(via UIManager)
+
 
 
 

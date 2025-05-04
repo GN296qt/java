@@ -18,7 +18,7 @@ public class gridbag extends Frame{
         bt3 = new Button(" gridbag  3");
         bt4 = new Button(" gridbag  4");    
         
-        // gridbag constraints
+        // gridbag constraints is a class 
         GridBagConstraints gbc = new GridBagConstraints();// gbc is an object of gridbagconstraints class
 
         // adding components to position in frame
