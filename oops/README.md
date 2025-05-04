@@ -384,8 +384,8 @@ AWT Architecture
 - default to frame
 3. GridLayout - arranges components in agrid with equal -sized rows and columns
 4. CardLayout -  allows switching between multiple pannels dynamically
-5. GridBagLayout - flexible layout for components of different sizes.
--  allowing custom positioning (advanced).
+5. GridBagLayout - flexible layout as it provides advanced control over positioning & resizing components.
+
 
 -> Event Handling
 -> gui components (also called awt controllers)
