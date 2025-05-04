@@ -1,5 +1,5 @@
 // package
-package oops.applets;
+package oops.EventHandling;
 // imports
 import java.awt.*;
 import java.awt.event.*;

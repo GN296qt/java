@@ -1,10 +1,10 @@
-package oops.applets;
+package oops.EventHandling;
 //imports
 import java.awt.*;
 import java.awt.event.*;
 
 // main class
-public class awt1 extends Frame implements ActionListener{
+public class awtcontroller extends Frame implements ActionListener{
     
     // declaration of awt controllers
     Label lbl;
@@ -17,7 +17,7 @@ public class awt1 extends Frame implements ActionListener{
     Scrollbar sb ;
 
     //constructor
-    public awt1(){
+    public awtcontroller(){
 
         // layout manager
         setLayout(new FlowLayout());
@@ -76,7 +76,7 @@ public class awt1 extends Frame implements ActionListener{
         }
         // main method
         public static void main(String[] args) {
-             new awt1();// new instance of awt1 class
+             new awtcontroller();// new instance of awt1 class
         }
 
 } 
