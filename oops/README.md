@@ -441,27 +441,30 @@ import java.awt.*;
 import java.awt.event.*;
 
 // class declaration
-public class classame extends Containernmae implements Eventclassname{
+public class classame extends ContainerName implements Eventhandlerclassname{
 
-    // instance variables declaration
+    //awt controllers  instance variables declaration
     awtcontrollername variablename;
 
     //constructor
     public classname(){
        
        //set layout manager
-       setLayout(new Layoutname());
+       setLayout(new LayoutName());
 
-       //awt ontroller intialization
-       variablename = new awtcontollername();
+       //awt controller intialization
+       VariableName = new awtcontollername();
        
+       //registers
+       VariableName.addeventhandlerclassname(this);
+
        // add components to containername
        add(variablename);
 
-       // register event handler 
+       //  event handler for closing
        addWindowListener(new WindowAdapter(){
             public void windowClosing(WindowEvent e){
-                 System.exist(0);//closes windowapp
+                 System.exit(0);//closes windowapp
             }
        } );
 
@@ -471,16 +474,16 @@ public class classame extends Containernmae implements Eventclassname{
        // window title
        setTitle("title name");
        // visibilty of window if true
-       setVisible();//can be true or fasle
+       setVisible(true);//requires true or fasle as an argumnet
     }
 
     //handling evnet
     public void actionPerformed(ActionEvent e){
-         variablenmae.setText("message to be displyed");
+         variableName.setText("message to be displyed");
     }   
 
     //main method - entry point of execution
-    public staic void main(String[] args){
+    public static void main(String[] args){
         //creates an instance of classname to        display gui
         new classname();
     }
