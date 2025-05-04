@@ -381,7 +381,169 @@ AWT Architecture
 1. FlowLayout - arranges components in a left to right flow
 2. BorderLayout - divide sthe container into 5 regions(north,south,east,west,center)
 3. GridLayout - arranges components in rows andcolumns
-4. CardLayout - allows multiple components in the same area like tabs
+4. CardLayout - allows multiple components in the same area like tabs.-  switching between different layouts dynamically.
+- Defines multiple Panel objects for each layout type (FlowLayout, BorderLayout, GridLayout, GridBagLayout).
+
+Constructor Definition
+public LayoutManagerDemo() {
+
+
+- Defines the constructor for initializing the GUI.
+
+Setting Layout Manager for the Frame
+setLayout(new BorderLayout());
+
+
+- Uses BorderLayout to structure the main window with a north (button panel) and center (content panel).
+
+Creating CardLayout Panel
+card = new CardLayout();
+mainPanel = new Panel(card);
+
+
+- Initializes CardLayout for mainPanel, allowing layout switching.
+- mainPanel holds multiple layout panels, each displayed one at a time.
+
+Creating FlowLayout Panel
+flowPanel = new Panel(new FlowLayout());
+flowPanel.add(new Button("Flow Layout"));
+flowPanel.add(new Button("Components arrange left to right"));
+}
+
+- Uses FlowLayout, which arranges components left to right sequentially.
+- Adds two buttons to demonstrate the layout behavior.
+
+Creating BorderLayout Panel
+borderPanel = new Panel(new BorderLayout());
+borderPanel.add(new Button("North"), BorderLayout.NORTH);
+borderPanel.add(new Button("South"), BorderLayout.SOUTH);
+borderPanel.add(new Button("East"), BorderLayout.EAST);
+borderPanel.add(new Button("West"), BorderLayout.WEST);
+borderPanel.add(new Button("Center"), BorderLayout.CENTER);
+
+
+- Uses BorderLayout, dividing the panel into five regions:
+- NORTH, SOUTH, EAST, WEST, and CENTER.
+- Each region contains a button to showcase positioning.
+
+Creating GridLayout Panel
+gridPanel = new Panel(new GridLayout(2, 2));
+gridPanel.add(new Button("Grid 1"));
+gridPanel.add(new Button("Grid 2"));
+gridPanel.add(new Button("Grid 3"));
+gridPanel.add(new Button("Grid 4"));
+
+
+- Uses GridLayout(2, 2), which creates a 2x2 grid.
+- Four buttons placed inside the grid.
+
+Creating GridBagLayout Panel
+gridBagPanel = new Panel(new GridBagLayout());
+GridBagConstraints gbc = new GridBagConstraints();
+gbc.gridx = 0;
+gbc.gridy = 0;
+gridBagPanel.add(new Button("GridBag 1"), gbc);
+gbc.gridx = 1;
+gridBagPanel.add(new Button("GridBag 2"), gbc);
+gbc.gridy = 1;
+gbc.gridx = 0;
+gridBagPanel.add(new Button("GridBag 3"), gbc);
+gbc.gridx = 1;
+gridBagPanel.add(new Button("GridBag 4"), gbc);
+
+
+- Uses GridBagLayout, which allows flexible component placement.
+- Defines constraints (GridBagConstraints gbc):
+- gbc.gridx = 0; gbc.gridy = 0; → First button (top-left).
+- gbc.gridx = 1; → Second button (top-right).
+- gbc.gridy = 1; gbc.gridx = 0; → Third button (bottom-left).
+- gbc.gridx = 1; → Fourth button (bottom-right).
+
+Adding Panels to CardLayout
+mainPanel.add(flowPanel, "Flow");
+mainPanel.add(borderPanel, "Border");
+mainPanel.add(gridPanel, "Grid");
+mainPanel.add(gridBagPanel, "GridBag");
+
+
+- Each panel added to mainPanel using CardLayout.
+- Labels ("Flow", "Border", "Grid", "GridBag") represent layout names for switching.
+
+Creating Button Panel for Layout Switching
+Panel buttonPanel = new Panel(new FlowLayout());
+Button btnFlow = new Button("FlowLayout");
+Button btnBorder = new Button("BorderLayout");
+Button btnGrid = new Button("GridLayout");
+Button btnGridBag = new Button("GridBagLayout");
+
+
+- Creates a separate panel (buttonPanel) for layout-switching buttons.
+- Each button corresponds to a layout type.
+
+Registering Event Handlers for Buttons
+btnFlow.addActionListener(this);
+btnBorder.addActionListener(this);
+btnGrid.addActionListener(this);
+btnGridBag.addActionListener(this);
+
+
+- Registers ActionListener for all buttons, allowing interaction.
+
+Adding Button Panel & Main Panel to Frame
+buttonPanel.add(btnFlow);
+buttonPanel.add(btnBorder);
+buttonPanel.add(btnGrid);
+buttonPanel.add(btnGridBag);
+
+add(buttonPanel, BorderLayout.NORTH);
+add(mainPanel, BorderLayout.CENTER);
+
+
+- Adds buttons to buttonPanel.
+- Places buttonPanel at BorderLayout.NORTH (top) and mainPanel at BorderLayout.CENTER (middle).
+
+Handling Window Closing
+addWindowListener(new WindowAdapter() {
+    public void windowClosing(WindowEvent e) {
+        System.exit(0);
+    }
+});
+
+
+- Registers WindowAdapter to handle window closing.
+- Calling System.exit(0) ensures the application terminates when closed.
+
+Setting Frame Properties
+setSize(400, 300);
+setTitle("Layout Manager Demo");
+setVisible(true);
+
+
+- Sets window size to 400x300 pixels.
+- Sets title "Layout Manager Demo".
+- Makes the window visible.
+
+Handling Button Clicks to Switch Layouts
+public void actionPerformed(ActionEvent e) {
+    card.show(mainPanel, e.getActionCommand().replace("Layout", ""));
+}
+
+
+- Triggered when a button is clicked.
+- Extracts the layout name from button text (replace("Layout", "")).
+- Displays the corresponding layout in CardLayout.
+
+Main Method
+public static void main(String[] args) {
+    new LayoutManagerDemo();
+}
+
+
+- Entry point for program execution.
+- Creates and displays an instance of LayoutManagerDemo.
+
+
+
 5. GridBagLayout - flexible layout for components of different sizes.
 -> Event Handling
 -> gui components (also called awt controllers)
@@ -441,6 +603,10 @@ import java.awt.*;
 import java.awt.event.*;
 
 // class declaration
+// Classnmae is a public class
+// Classname is inheriting from ContainerName for making gui compomnents
+// ClassName ia slao implementing 
+//EvnetHandlerClassName
 public class classame extends ContainerName implements Eventhandlerclassname{
 
     //awt controllers  instance variables declaration
